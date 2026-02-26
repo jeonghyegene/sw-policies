@@ -1,0 +1,65 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+/* GitHub Docs Style Overrides for VitePress */
+:root {
+  /* Font Family to Pretendard */
+  --vp-font-family-base: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --vp-sidebar-hover-bg: rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  /* Colors */
+  --vp-c-bg: #0d1117;
+  --vp-c-bg-alt: #0d1117;
+  --vp-sidebar-bg-color: #0d1117;
+  --vp-c-divider: #30363d;
+
+  /* Text */
+  --vp-c-text-1: #c9d1d9;
+  --vp-c-text-2: #8b949e;
+  --vp-c-text-3: #8b949e;
+
+  /* Brand accents */
+  --vp-c-brand-1: #58a6ff;
+  --vp-c-brand-2: #79c0ff;
+  --vp-c-brand-3: #a5d6ff;
+
+  /* Sidebar Links */
+  --vp-sidebar-hover-bg: #161b22;
+}
+
+body {
+  font-family: var(--vp-font-family-base);
+}
+
+/* Sidebar Specific Overrides */
+.dark .VPSidebar {
+  background-color: var(--vp-sidebar-bg-color) !important;
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+.VPSidebarItem.level-0 > .item > .text {
+  font-weight: 600;
+  font-size: 14px;
+}
+.dark .VPSidebarItem.level-0 > .item > .text {
+  color: var(--vp-c-text-1) !important;
+}
+
+.VPSidebarItem.level-1 > .item > .link > .text {
+  font-weight: 500;
+  font-size: 14px;
+}
+.dark .VPSidebarItem.level-1 > .item > .link > .text {
+  color: var(--vp-c-text-1) !important;
+}
+
+.VPSidebarItem.level-1 > .item > .link:hover {
+  background-color: var(--vp-sidebar-hover-bg);
+  border-radius: 6px;
+}
+
+/* Caret styling to match GitHub (smaller and subtle) */
+.dark .caret {
+  color: var(--vp-c-text-2) !important;
+}

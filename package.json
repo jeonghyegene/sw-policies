@@ -1,0 +1,12 @@
+{
+  "name": "policy-wiki",
+  "version": "1.0.0",
+  "scripts": {
+    "docs:dev": "npx --yes rimraf .vitepress/cache .vitepress/dist && vitepress build . && vitepress preview . --port 5173",
+    "docs:build": "vitepress build .",
+    "docs:preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "vitepress": "latest"
+  }
+}
