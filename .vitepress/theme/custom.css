@@ -3,29 +3,36 @@
 /* GitHub Docs Style Overrides for VitePress */
 :root {
   /* Font Family to Pretendard */
-  --vp-font-family-base: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --vp-font-family-base:
+    "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   --vp-sidebar-hover-bg: rgba(0, 0, 0, 0.05);
 }
 
 .dark {
-  /* Colors */
-  --vp-c-bg: #0d1117;
-  --vp-c-bg-alt: #0d1117;
-  --vp-sidebar-bg-color: #0d1117;
-  --vp-c-divider: #30363d;
+  /* Colors - using a pure neutral dark gray / zinc instead of navy tint */
+  --vp-c-bg: #18181b;
+  --vp-c-bg-alt: #18181b;
+  --vp-sidebar-bg-color: #18181b;
+  /* Border Colors */
+  --vp-c-divider: rgba(255, 255, 255, 0.12);
+  --vp-c-divider-light: rgba(255, 255, 255, 0.12);
+  --vp-c-divider-inverse: rgba(255, 255, 255, 0.12);
+  --vp-c-border: rgba(255, 255, 255, 0.12);
+  --vp-c-gutter: rgba(255, 255, 255, 0.12);
 
   /* Text */
-  --vp-c-text-1: #c9d1d9;
-  --vp-c-text-2: #8b949e;
-  --vp-c-text-3: #8b949e;
+  --vp-c-text-1: #e4e4e7;
+  --vp-c-text-2: #a1a1aa;
+  --vp-c-text-3: #a1a1aa;
 
   /* Brand accents */
-  --vp-c-brand-1: #58a6ff;
-  --vp-c-brand-2: #79c0ff;
-  --vp-c-brand-3: #a5d6ff;
+  --vp-c-brand-1: #60a5fa;
+  --vp-c-brand-2: #93c5fd;
+  --vp-c-brand-3: #bfdbfe;
 
   /* Sidebar Links */
-  --vp-sidebar-hover-bg: #161b22;
+  --vp-sidebar-hover-bg: #27272a;
 }
 
 body {
@@ -36,6 +43,28 @@ body {
 .dark .VPSidebar {
   background-color: var(--vp-sidebar-bg-color) !important;
   border-right: 1px solid var(--vp-c-divider);
+}
+
+/* Dark Mode Search Bar Customization */
+.dark .VPNavBarSearch .DocSearch-Button {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .VPNavBarSearch .DocSearch-Button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dark .VPNavBarSearch .DocSearch-Button-Keys {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Remove bottom borders from headings in dark mode */
+.dark .vp-doc h1,
+.dark .vp-doc h2 {
+  border-bottom: none !important;
 }
 
 .VPSidebarItem.level-0 > .item > .text {

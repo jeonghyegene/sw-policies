@@ -77,8 +77,11 @@ export default defineConfig({
         },
         {
           text: "공통 및 기타",
-          collapsed: true,
-          items: [{ text: "검색", link: "/documents/검색_Screen_Policy_Final" }],
+          collapsed: false,
+          items: [
+            { text: "검색", link: "/documents/검색_Screen_Policy_Final" },
+            { text: "확인 필요사항 정리", link: "/documents/확인필요사항_정리" }
+          ],
         },
       ],
     },
