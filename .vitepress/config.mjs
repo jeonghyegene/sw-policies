@@ -1,6 +1,9 @@
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
+  head: [
+    ['script', { src: 'https://hypothes.is/embed.js', async: '' }]
+  ],
   title: "Sungwon Wiki",
   description: "통합 지식 베이스 및 화면 정책서 for 성원애드피아",
   lang: "ko-KR",
